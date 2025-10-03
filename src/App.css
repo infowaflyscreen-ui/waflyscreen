@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&family=Marcellus+SC&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&family=Marcellus+SC&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+.font-Marcellus {
+ font-family: "Marcellus SC", serif;
+    /* font-family: "Ysabeau Infant", sans-serif; */
+}
+
+.font-Josefin {
+  font-family: "Josefin Sans", sans-serif !important;
+    /* font-family: "Ysabeau Infant", sans-serif; */
+}
+
+
+
+.font-Oswald {
+ /* font-family: "Oswald", sans-serif; */
+    font-family: "Ysabeau Infant", sans-serif;
+}
+
+
+
+
