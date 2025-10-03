@@ -5,7 +5,7 @@ import Chatbutton from "../page/Chatbutton";
 import ArrowUp from "../page/ArrowUp";
 import Footer from "../page/Footer";
 import TopBar from "./TopBar";
-import Header from "./header";
+import Header from "./Header";
 import HeroSlider from "./HeroSlider";
 import TestimonialSection from "./TestimonialSection";
 import Blog from "./Blog";
