@@ -1,6 +1,6 @@
 import React from "react";
 import Aboutus from "../page/Aboutus";
-import Faq from "../page/Faq";
+import Faq from "../page/FAQ";
 import Chatbutton from "../page/Chatbutton";
 import ArrowUp from "../page/ArrowUp";
 import Footer from "../page/Footer";
