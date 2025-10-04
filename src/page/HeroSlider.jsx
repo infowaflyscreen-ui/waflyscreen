@@ -30,6 +30,7 @@ export default function HeroSection() {
       subtitle: "Rust-Free | Easy to Clean | Long-Lasting",
       button: "Enquire Now",
       image: "/d1.png",
+      imageMobile: "/c1.jpg",
     },
     {
       id: 2,
@@ -37,6 +38,7 @@ export default function HeroSection() {
       subtitle: "Strong | Stylish | Seamless Fit",
       button: "Enquire Now",
       image: "m7.jpg",
+      imageMobile: "/c2.jpg",
     },
     {
       id: 3,
@@ -44,6 +46,7 @@ export default function HeroSection() {
       subtitle: "Keep Bugs Out, Let Fresh Air In",
       button: "Enquire Now",
       image: "/d3.png",
+      imageMobile: "/c3.jpg",
     },
   ];
 
@@ -77,7 +80,12 @@ export default function HeroSection() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hidden md:block"
+              />
+              <img
+                src={slide.imageMobile}
+                alt={slide.title}
+                className="w-full h-full object-cover md:hidden"
               />
               <div className="absolute inset-0 bg-black/40 z-10" />
 
