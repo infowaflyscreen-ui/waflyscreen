@@ -68,7 +68,7 @@ function Footer() {
         //   padding: "10px",
         //   minHeight: "100vh",
         // }}
-        className="w-full text-white bg-[#122632] bg-[url('/c4.jpg')] md:bg-[url('/footer.jpg')] bg-cover bg-no-repeat bg-left p-[10px] min-h-screen"
+        className="w-full text-white bg-[#122632] bg-[url('/c5.jpg')] md:bg-[url('/footer.jpg')] bg-cover bg-no-repeat bg-left p-[10px] min-h-screen"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-10">
           <div className="bg-[#00000069] rounded-2xl p-4 sm:p-6 lg:p-8">
