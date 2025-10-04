@@ -448,7 +448,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 3,
       date: "01 Oct 2025",
-      image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      image: "/b14.jpg",
     },
     {
       id: 2,
@@ -458,7 +458,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 2,
       date: "30 Sep 2025",
-      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      image: "/b12.jpg",
     },
     {
       id: 3,
@@ -468,7 +468,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 4,
       date: "29 Sep 2025",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop",
+      image: "/b15.jpg",
     },
     {
       id: 4,
@@ -478,7 +478,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 5,
       date: "28 Sep 2025",
-      image: "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&h=600&fit=crop",
+      image: "/b11.jpg",
     },
     {
       id: 5,
@@ -488,7 +488,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 3,
       date: "27 Sep 2025",
-      image: "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800&h=600&fit=crop",
+      image: "/b12.jpg",
     },
   ];
 
@@ -567,7 +567,7 @@ const NewsSlider = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className=" h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="md:w-full h-64 sm:h-72 lg:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                     <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-[#122632]/90 text-white px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg font-semibold text-xs">
