@@ -269,31 +269,31 @@ const testimonials = [
   },
   {
     name: "Asheigh Bowyer",
-    date: "03/01/2025",
+    date: "7/02/2025",
     rating: 5,
     text: "Bloody brilliant, fast, efficient and unlike everyone else weren't stupid about the price 😊 Highly recommend them for flyscreen installations."
   },
   {
     name: "Preeti Soni",
-    date: "03/01/2025",
+    date: "10/03/2025",
     rating: 5,
     text: "Found these guys in FB and thought of giving a try. They were absolutely fantastic. Very prompt with response and super reliable."
   },
   {
     name: "Michael Green",
-    date: "04/01/2025",
+    date: "16/04/2025",
     rating: 5,
     text: "Amazing service! The installation was quick and the team was super professional. Highly recommended for anyone looking for quality flyscreens."
   },
   {
     name: "Sophia Lee",
-    date: "05/01/2025",
+    date: "18/05/2025",
     rating: 5,
     text: "Really happy with the quality of the flyscreens. They look great and work perfectly. Excellent value for money, would use them again!"
   },
   {
     name: "David Johnson",
-    date: "06/01/2025",
+    date: "19/06/2025",
     rating: 5,
     text: "Top-notch service from start to finish. Friendly staff and very efficient. Would definitely use them again in the future."
   }
