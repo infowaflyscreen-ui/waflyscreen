@@ -432,7 +432,6 @@
 
 // export default NewsSlider;
 
-
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, MessageCircle, User } from "lucide-react";
 
@@ -449,7 +448,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 3,
       date: "01 Oct 2025",
-      image: "/b2.png",
+      image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
     },
     {
       id: 2,
@@ -459,7 +458,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 2,
       date: "30 Sep 2025",
-      image: "/b1.png",
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
     },
     {
       id: 3,
@@ -469,7 +468,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 4,
       date: "29 Sep 2025",
-      image: "/b3.png",
+      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop",
     },
     {
       id: 4,
@@ -479,7 +478,7 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 5,
       date: "28 Sep 2025",
-      image: "/b4.jpg",
+      image: "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&h=600&fit=crop",
     },
     {
       id: 5,
@@ -489,9 +488,10 @@ const NewsSlider = () => {
       author: "Wa Flyscreen",
       comments: 3,
       date: "27 Sep 2025",
-      image: "/2.jpg",
+      image: "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800&h=600&fit=crop",
     },
   ];
+
   const getVisibleSlides = () => {
     if (window.innerWidth >= 1024) return 3;
     if (window.innerWidth >= 768) return 2;
@@ -537,17 +537,17 @@ const NewsSlider = () => {
   }, [isAutoPlaying, maxSlideIndex]);
 
   return (
-    <div className="w-full mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 py-6 xs:py-8 sm:py-10 md:py-12 text-[#122632] font-sans">
+    <div className="w-full mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 text-[#122632] font-sans">
       {/* Header */}
-      <div className="text-center mb-4 xs:mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-        <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 px-2 xs:px-4">
+      <div className="text-center mb-6 sm:mb-10 lg:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 px-4">
           Our Latest News
         </h1>
       </div>
 
       {/* Slider Container */}
       <div className="relative max-w-[1400px] mx-auto">
-        <div className="overflow-hidden rounded-lg xs:rounded-xl sm:rounded-2xl">
+        <div className="overflow-hidden rounded-xl sm:rounded-2xl">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -558,20 +558,17 @@ const NewsSlider = () => {
             {newsItems.map((item) => (
               <div
                 key={item.id}
-                className="w-full px-1 xs:px-1.5 sm:px-2 md:px-3 flex-shrink-0"
+                className="w-full px-1.5 sm:px-2 md:px-3 flex-shrink-0"
                 style={{ width: `${100 / visibleSlides}%` }}
               >
                 <div className="bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer h-full">
                   {/* Image */}
-                  <div className="relative w-full h-48 xs:h-52 sm:h-56 md:h-60 lg:h-64 xl:h-72 overflow-hidden rounded-t-xl sm:rounded-t-2xl bg-gray-100 min-h-[200px] sm:min-h-[auto]">
+                  <div className="relative w-full overflow-hidden rounded-t-xl sm:rounded-t-2xl">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className=" h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                      }}
                     />
                     <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-[#122632]/90 text-white px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg font-semibold text-xs">
                       {item.date}
@@ -579,30 +576,30 @@ const NewsSlider = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="p-2 xs:p-3 sm:p-4 lg:p-5">
-                    <div className="flex items-center justify-between text-xs xs:text-sm mb-1.5 xs:mb-2 sm:mb-3 text-[#122632]/70">
-                      <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2">
-                        <User className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-                        <span className="truncate max-w-[80px] xs:max-w-[100px] sm:max-w-none">{item.author}</span>
+                  <div className="p-3 sm:p-4 lg:p-5">
+                    <div className="flex items-center justify-between text-xs mb-2 sm:mb-3 text-[#122632]/70">
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <User className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <span className="truncate max-w-[100px] sm:max-w-none">{item.author}</span>
                       </div>
-                      <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2">
-                        <MessageCircle className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         <span className="whitespace-nowrap">
                           {item.comments} Comment{item.comments !== 1 ? "s" : ""}
                         </span>
                       </div>
                     </div>
 
-                    <h3 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1 xs:mb-1.5 sm:mb-2 line-clamp-2 leading-tight xs:leading-snug">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1.5 sm:mb-2 line-clamp-2 leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-xs xs:text-xs sm:text-sm md:text-base text-[#122632]/80 mb-1.5 xs:mb-2 sm:mb-3 leading-relaxed line-clamp-2 sm:line-clamp-3">
+                    <p className="text-xs sm:text-sm md:text-base text-[#122632]/80 mb-2 sm:mb-3 leading-relaxed line-clamp-2 sm:line-clamp-3">
                       {item.description}
                     </p>
 
-                    <button className="inline-flex items-center gap-1 xs:gap-1.5 sm:gap-2 font-semibold text-[#122632] hover:gap-1.5 xs:hover:gap-2 sm:hover:gap-3 transition-all duration-300 text-xs xs:text-xs sm:text-sm">
+                    <button className="inline-flex items-center gap-1.5 sm:gap-2 font-semibold text-[#122632] hover:gap-2 sm:hover:gap-3 transition-all duration-300 text-xs sm:text-sm">
                       <span>READ MORE</span>
-                      <ChevronRight className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+                      <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </button>
                   </div>
                 </div>
@@ -614,64 +611,48 @@ const NewsSlider = () => {
         {/* Desktop Arrows */}
         <button
           onClick={prevSlide}
-          className="hidden xl:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 2xl:-translate-x-6 z-10 bg-white/90 shadow-lg rounded-full p-2.5 sm:p-3 group hover:bg-[#122632] transition-all duration-300"
+          className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 xl:-translate-x-6 z-10 bg-white/90 shadow-lg rounded-full p-3 group hover:bg-[#122632] transition-all duration-300"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 xl:w-6 xl:h-6 text-[#122632] group-hover:text-white" />
+          <ChevronLeft className="w-5 h-5 xl:w-6 xl:h-6 text-[#122632] group-hover:text-white" />
         </button>
         <button
           onClick={nextSlide}
-          className="hidden xl:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 2xl:translate-x-6 z-10 bg-white/90 shadow-lg rounded-full p-2.5 sm:p-3 group hover:bg-[#122632] transition-all duration-300"
+          className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 xl:translate-x-6 z-10 bg-white/90 shadow-lg rounded-full p-3 group hover:bg-[#122632] transition-all duration-300"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 xl:w-6 xl:h-6 text-[#122632] group-hover:text-white" />
-        </button>
-
-        {/* Tablet/Desktop Arrows */}
-        <button
-          onClick={prevSlide}
-          className="hidden lg:flex xl:hidden absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 bg-white/90 shadow-lg rounded-full p-2 sm:p-2.5 group hover:bg-[#122632] transition-all duration-300"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-[#122632] group-hover:text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="hidden lg:flex xl:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 bg-white/90 shadow-lg rounded-full p-2 sm:p-2.5 group hover:bg-[#122632] transition-all duration-300"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#122632] group-hover:text-white" />
+          <ChevronRight className="w-5 h-5 xl:w-6 xl:h-6 text-[#122632] group-hover:text-white" />
         </button>
 
         {/* Mobile/Tablet Buttons */}
-        <div className="flex justify-center gap-3 xs:gap-4 sm:gap-5 md:gap-6 mt-3 xs:mt-4 sm:mt-5 md:mt-6 lg:hidden">
+        <div className="flex justify-center gap-4 sm:gap-6 mt-4 sm:mt-6 lg:hidden">
           <button
             onClick={prevSlide}
-            className="bg-white/90 shadow-lg rounded-full p-2 xs:p-2.5 sm:p-3 hover:bg-[#122632] active:scale-95 transition-all duration-300 group"
+            className="bg-white/90 shadow-lg rounded-full p-2.5 sm:p-3 hover:bg-[#122632] active:scale-95 transition-all duration-300 group"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-[#122632] group-hover:text-white" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#122632] group-hover:text-white" />
           </button>
           <button
             onClick={nextSlide}
-            className="bg-white/90 shadow-lg rounded-full p-2 xs:p-2.5 sm:p-3 hover:bg-[#122632] active:scale-95 transition-all duration-300 group"
+            className="bg-white/90 shadow-lg rounded-full p-2.5 sm:p-3 hover:bg-[#122632] active:scale-95 transition-all duration-300 group"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-[#122632] group-hover:text-white" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#122632] group-hover:text-white" />
           </button>
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center items-center mt-3 xs:mt-4 sm:mt-5 md:mt-6 gap-1 xs:gap-1.5 sm:gap-2">
+        <div className="flex justify-center items-center mt-4 sm:mt-6 gap-1.5 sm:gap-2">
           {Array.from({ length: maxSlideIndex + 1 }).map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
-              className={`h-1.5 xs:h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
+              className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
                 currentSlide === index
-                  ? "bg-[#122632] w-4 xs:w-5 sm:w-6 md:w-7"
-                  : "bg-gray-300 w-1.5 xs:w-2 sm:w-2.5 hover:bg-[#122632]/70 active:scale-90"
+                  ? "bg-[#122632] w-6 sm:w-7"
+                  : "bg-gray-300 w-2 sm:w-2.5 hover:bg-[#122632]/70 active:scale-90"
               }`}
             />
           ))}
