@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
+  FaYoutube,
   FaPlus,
   FaMinus,
 } from "react-icons/fa6";
@@ -78,8 +78,9 @@ function Footer() {
                 <img
                   src="/logo1.png"
                   alt="Logo"
-                  className="h-24 sm:h-28 md:h-32 w-auto ml-0"
+                  className="h-24 sm:h-28 md:h-32 w-auto ml-0 rounded-lg"
                 />
+
 
                 <div className="w-full max-w-sm lg:max-w-md mt-6">
                   <div className="flex rounded-lg overflow-hidden shadow-lg border border-gray-300">
@@ -101,11 +102,10 @@ function Footer() {
                   {/* Status message */}
                   {status && (
                     <p
-                      className={`mt-2 text-sm ${
-                        status.type === "success"
+                      className={`mt-2 text-sm ${status.type === "success"
                           ? "text-green-500"
                           : "text-red-500"
-                      }`}
+                        }`}
                     >
                       {status.message}
                     </p>
@@ -131,11 +131,10 @@ function Footer() {
                   </span>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isQuickLinksOpen
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isQuickLinksOpen
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
-                  }`}
+                    }`}
                 >
                   <ul className="space-y-2 p-2">
                     <li>
@@ -192,11 +191,10 @@ function Footer() {
                   </span>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isPoliciesOpen
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isPoliciesOpen
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
-                  }`}
+                    }`}
                 >
                   <ul className="space-y-2 p-2">
                     <li>
@@ -237,11 +235,10 @@ function Footer() {
                   </span>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isConnectOpen
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isConnectOpen
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
-                  }`}
+                    }`}
                 >
                   <ul className="space-y-2 p-2">
                     <li className="text-sm lg:text-base">+61 468 444 748</li>
@@ -251,25 +248,25 @@ function Footer() {
                   </ul>
                   <div className="flex gap-3 lg:gap-4 mt-4">
                     <Link
-                      to="#"
+                      to="https://www.facebook.com/profile.php?viewas=100000686899395&id=61581506022769"
                       className="flex items-center justify-center w-10 h-10 bg-white rounded-full text-[#122632] hover:bg-[#122632] hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                       aria-label="Facebook"
                     >
                       <FaFacebookF className="w-6 h-6 lg:w-7 lg:h-7" />
                     </Link>
                     <Link
-                      to="#"
+                      to="https://www.instagram.com/waflyscreen/"
                       className="flex items-center justify-center w-10 h-10 bg-white rounded-full text-[#122632] hover:bg-[#122632] hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                       aria-label="Instagram"
                     >
                       <FaInstagram className="w-6 h-6 lg:w-7 lg:h-7" />
                     </Link>
                     <Link
-                      to="#"
+                      to="https://www.youtube.com/@WaFlyscreen"
                       className="flex items-center justify-center w-10 h-10 bg-white rounded-full text-[#122632] hover:bg-[#122632] hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
-                      aria-label="LinkedIn"
+                      aria-label="Youtube"
                     >
-                      <FaLinkedinIn className="w-6 h-6 lg:w-7 lg:h-7" />
+                      <FaYoutube className="w-6 h-6 lg:w-7 lg:h-7" />
                     </Link>
                   </div>
                 </div>

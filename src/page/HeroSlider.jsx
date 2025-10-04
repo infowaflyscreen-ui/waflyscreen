@@ -36,7 +36,7 @@ export default function HeroSection() {
       title: "Premium Mesh Collection",
       subtitle: "Strong | Stylish | Seamless Fit",
       button: "Enquire Now",
-      image: "/d2.png",
+      image: "m7.jpg",
     },
     {
       id: 3,
