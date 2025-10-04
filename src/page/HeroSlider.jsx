@@ -38,7 +38,7 @@ export default function HeroSection() {
       subtitle: "Strong | Stylish | Seamless Fit",
       button: "Enquire Now",
       image: "m7.jpg",
-      imageMobile: "/c2.jpg",
+      imageMobile: "/c4.jpg",
     },
     {
       id: 3,
