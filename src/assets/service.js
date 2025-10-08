@@ -60,7 +60,7 @@ Call Wa Flyscreen for on-site professional service.
   },
   {
     image: "/s3.jpeg",
-    img1: "/sk3.jpg",
+    img1: "/sk3.jpeg",
     title: "Aluminium Mesh Screen Repair & Replacement – Wa Flyscreen",
     page: "/Service3",
     main_des: `Reliable Aluminium Mesh Screen Repair & Replacement. Ideal for homes and businesses seeking strong, long-lasting screens, our aluminium mesh services restore or replace damaged screens efficiently.`,
