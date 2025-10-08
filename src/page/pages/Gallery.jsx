@@ -2,15 +2,15 @@ import React from "react";
 
 export default function App() {
     const items = [
-  { src: "/m1.jpg", label: "Blinds" },
-  { src: "/m2.jpg", label: "Curtains" },
-  { src: "/m3.jpg", label: "Roller Blinds" },
-  { src: "/m4.jpg", label: "Doors" },
-  { src: "/m8.jpg", label: "Windows" },
-  { src: "/m6.jpg", label: "Shades" },
-  { src: "/m7.jpg", label: "Screens" },
-  { src: "/m9.jpg", label: "Screens" },
-  { src: "/1020.jpg", label: "Screens" },
+  { src: "/g1.jpeg", label: "Blinds" },
+  { src: "/g2.jpeg", label: "Curtains" },
+  { src: "/g3.jpeg", label: "Roller Blinds" },
+  { src: "/g4.jpeg", label: "Doors" },
+  { src: "/g5.jpeg", label: "Windows" },
+  { src: "/g6.jpeg", label: "Shades" },
+  // { src: "/g7.jpeg", label: "Screens" },
+  // { src: "/m9.jpg", label: "Screens" },
+  // { src: "/1020.jpg", label: "Screens" },
   ];
 
   return (

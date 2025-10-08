@@ -262,40 +262,40 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Valleri Hodikumo",
+    name: "Lisa Thompson",
     date: "03/01/2025",
     rating: 5,
-    text: "Great experience with RBC flyscreen and highly recommend their services. They offer quick, efficient and professional service with very friendly staff."
+    text: "Fantastic experience with WA Flyscreen! The team was punctual, professional, and the quality of their flyscreens is excellent. Highly recommended!"
   },
   {
-    name: "Asheigh Bowyer",
-    date: "7/02/2025",
+    name: "James Carter",
+    date: "07/02/2025",
     rating: 5,
-    text: "Bloody brilliant, fast, efficient and unlike everyone else weren't stupid about the price 😊 Highly recommend them for flyscreen installations."
+    text: "Super quick and friendly service. WA Flyscreen gave me a great quote and installed everything perfectly. Definitely the best in Perth!"
   },
   {
-    name: "Preeti Soni",
+    name: "Priya Patel",
     date: "10/03/2025",
     rating: 5,
-    text: "Found these guys in FB and thought of giving a try. They were absolutely fantastic. Very prompt with response and super reliable."
+    text: "Saw their post online and decided to try them — absolutely worth it! WA Flyscreen responded quickly, arrived on time, and did a perfect job."
   },
   {
-    name: "Michael Green",
+    name: "Mark Reynolds",
     date: "16/04/2025",
     rating: 5,
-    text: "Amazing service! The installation was quick and the team was super professional. Highly recommended for anyone looking for quality flyscreens."
+    text: "Brilliant service from WA Flyscreen. The team was efficient, polite, and the results were top quality. My new flyscreens fit perfectly!"
   },
   {
-    name: "Sophia Lee",
+    name: "Emily Nguyen",
     date: "18/05/2025",
     rating: 5,
-    text: "Really happy with the quality of the flyscreens. They look great and work perfectly. Excellent value for money, would use them again!"
+    text: "Very impressed with the workmanship and professionalism. The flyscreens look amazing and keep all the bugs out. Great value for money!"
   },
   {
-    name: "David Johnson",
+    name: "Daniel Wilson",
     date: "19/06/2025",
     rating: 5,
-    text: "Top-notch service from start to finish. Friendly staff and very efficient. Would definitely use them again in the future."
+    text: "WA Flyscreen did an excellent job at my place. Quick install, fair pricing, and really friendly staff. I’ll definitely call them again!"
   }
 ];
 

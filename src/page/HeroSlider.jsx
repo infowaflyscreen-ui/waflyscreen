@@ -29,7 +29,7 @@ export default function HeroSection() {
       title: "Durable Flyscreens",
       subtitle: "Rust-Free | Easy to Clean | Long-Lasting",
       button: "Enquire Now",
-      image: "/d1.png",
+      image: "/cs1.jpg",
       imageMobile: "/c1.jpg",
     },
     {
@@ -37,8 +37,8 @@ export default function HeroSection() {
       title: "Premium Mesh Collection",
       subtitle: "Strong | Stylish | Seamless Fit",
       button: "Enquire Now",
-      image: "m7.jpg",
-      imageMobile: "/c4.jpg",
+      image: "/cs2.jfif",
+      imageMobile: "/cs4.webp",
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ export default function HeroSection() {
       subtitle: "Keep Bugs Out, Let Fresh Air In",
       button: "Enquire Now",
       image: "/d3.png",
-      imageMobile: "/c3.jpg",
+      imageMobile: "/cs3.jpg",
     },
   ];
 

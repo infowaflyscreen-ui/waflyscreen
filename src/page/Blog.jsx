@@ -5,58 +5,58 @@ const NewsSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const newsItems = [
-    {
-      id: 1,
-      title: "Why Fibreglass Flyscreens Are Essential",
-      description:
-        "Keep insects out while enjoying airflow and light with durable fibreglass flyscreens. Contact Wa Flyscreen for professional installation in Perth and Peel!",
-      author: "Wa Flyscreen",
-      comments: 3,
-      date: "01 Oct 2025",
-      image: "/b14.jpg",
-    },
-    {
-      id: 2,
-      title: "Top 5 Benefits of Fibreglass Flyscreens",
-      description:
-        "Discover the durability, airflow, and cost-effective benefits of fibreglass flyscreens. Get a custom fit with Wa Flyscreen's mobile service!",
-      author: "Wa Flyscreen",
-      comments: 2,
-      date: "30 Sep 2025",
-      image: "/b12.jpg",
-    },
-    {
-      id: 3,
-      title: "Maintaining Your Fibreglass Flyscreens",
-      description:
-        "Extend the life of your flyscreens with simple cleaning and regular inspections. Wa Flyscreen offers mobile repairs across Perth and Peel!",
-      author: "Wa Flyscreen",
-      comments: 4,
-      date: "29 Sep 2025",
-      image: "/b15.jpg",
-    },
-    {
-      id: 4,
-      title: "Heavy-Duty Pet Mesh Screens for Pet Owners",
-      description:
-        "Protect your home and pets with scratch-resistant pet mesh screens. Contact Wa Flyscreen for durable, custom solutions!",
-      author: "Wa Flyscreen",
-      comments: 5,
-      date: "28 Sep 2025",
-      image: "/b11.jpg",
-    },
-    {
-      id: 5,
-      title: "Pet Mesh Screens for Safety and Comfort",
-      description:
-        "Keep pets safe and your home insect-free with heavy-duty pet mesh screens. Book Wa Flyscreen's mobile installation today!",
-      author: "Wa Flyscreen",
-      comments: 3,
-      date: "27 Sep 2025",
-      image: "/b12.jpg",
-    },
-  ];
+const newsItems = [
+  {
+    id: 1,
+    title: "Fibreglass Flyscreen Repair & Replacement Tips",
+    description:
+      "Learn how to repair minor tears or replace worn-out fibreglass flyscreens. Wa Flyscreen provides professional on-site service across Perth and Peel!",
+    author: "Wa Flyscreen",
+    comments: 3,
+    date: "01 Oct 2025",
+    image: "/b1.jpeg",
+  },
+  {
+    id: 2,
+    title: "Maintaining Your Fibreglass Screens After Replacement",
+    description:
+      "Extend the life of your repaired or replaced fibreglass screens with simple cleaning and regular inspections. Wa Flyscreen offers mobile repairs at your convenience!",
+    author: "Wa Flyscreen",
+    comments: 2,
+    date: "30 Sep 2025",
+    image: "/b2.jpeg",
+  },
+  {
+    id: 3,
+    title: "Pet Mesh Screen Repair: Protect Your Pets and Home",
+    description:
+      "Keep pets safe and your home insect-free by repairing or replacing damaged pet mesh screens. Wa Flyscreen’s experts provide fast, reliable mobile service!",
+    author: "Wa Flyscreen",
+    comments: 4,
+    date: "29 Sep 2025",
+    image: "/b15.jpg",
+  },
+  {
+    id: 4,
+    title: "Aluminium Mesh Screen Replacement Guide",
+    description:
+      "Aluminium mesh screens provide strength and durability. Learn when to repair and when to replace them with Wa Flyscreen’s professional mobile services.",
+    author: "Wa Flyscreen",
+    comments: 5,
+    date: "28 Sep 2025",
+    image: "/b4.jpeg",
+  },
+  {
+    id: 5,
+    title: "Quick Repairs for Damaged Flyscreens",
+    description:
+      "Minor tears or bent frames? Wa Flyscreen can repair or replace your fibreglass, pet mesh, or aluminium mesh screens quickly and efficiently.",
+    author: "Wa Flyscreen",
+    comments: 3,
+    date: "27 Sep 2025",
+    image: "/b5.jpeg",
+  },
+];
 
   const getVisibleSlides = () => {
     if (typeof window === 'undefined') return 1;

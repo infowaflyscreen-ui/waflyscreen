@@ -126,42 +126,39 @@ import React, { useState } from "react";
 
 const FAQSection = () => {
   const faqData = [
-    {
-      question: "What areas do you service?",
-      answer:
-        "We provide mobile flyscreen installations and repairs across Perth and Peel, coming directly to your home or business.",
-    },
-    {
-      question: "What types of flyscreens do you offer?",
-      answer:
-        "We offer Fibreglass Flyscreens, Heavy-Duty Pet Mesh Screens, and Custom-Made Flyscreens for all window and door types.",
-    },
-    {
-      question: "Can you repair damaged flyscreens?",
-      answer:
-        "Yes! We repair torn, bent, or broken flyscreens on-site, saving you time and hassle.",
-    },
-    {
-      question: "How long does an installation or repair take?",
-      answer:
-        "Most standard jobs are completed in 1–2 hours, depending on size and complexity. Custom jobs may take longer.",
-    },
-    {
-      question: "Are your screens pet-friendly?",
-      answer:
-        "Yes, our Heavy-Duty Pet Mesh Screens are designed to withstand claws and paws, keeping pets safe while protecting your home.",
-    },
-    {
-      question: "Do you provide a warranty?",
-      answer:
-        "Yes, all installations and repairs come with a [Insert Warranty Period] warranty on workmanship.",
-    },
-    {
-      question: "How do I get a quote or book a service?",
-      answer:
-        "Contact us via phone, email, WhatsApp, or our online form for a free, no-obligation quote.",
-    },
-  ];
+  {
+    question: "What areas do you service?",
+    answer:
+      "We provide mobile flyscreen repair and replacement services across Perth and Peel, coming directly to your home or business.",
+  },
+  {
+    question: "What types of flyscreens can you repair or replace?",
+    answer:
+      "We repair and replace Fibreglass Flyscreens, Heavy-Duty Pet Mesh Screens, and Aluminium Mesh Screens for all window and door types.",
+  },
+  {
+    question: "Can you repair damaged flyscreens?",
+    answer:
+      "Yes! We repair torn, bent, or broken screens on-site, restoring them to full functionality and appearance.",
+  },
+  {
+    question: "How long does a repair or replacement take?",
+    answer:
+      "Most standard repairs and replacements are completed in 1–2 hours, depending on the screen type and size. Custom jobs may take longer.",
+  },
+  {
+    question: "Are your screens pet-friendly?",
+    answer:
+      "Yes, our Heavy-Duty Pet Mesh Screens are designed to withstand claws and paws, keeping pets safe while maintaining protection from insects.",
+  },
+  {
+    question: "Do you provide a warranty on repairs or replacements?",
+    answer:
+      "Yes, all repairs and replacements come with a workmanship warranty to ensure long-lasting performance and customer satisfaction.",
+  },
+
+];
+
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -250,7 +247,7 @@ const FAQSection = () => {
         {/* Right Side - Image */}
         <div className="flex justify-center lg:justify-end">
           <img
-            src="/H86786fc0c2c5448db5e2f741b47f2fb6u.png"
+            src="/faq.jpg"
             alt="FAQ Illustration"
             className="rounded-2xl shadow-lg max-w-full h-auto object-cover"
           />
