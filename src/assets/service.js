@@ -29,7 +29,7 @@ Contact Wa Flyscreen for on-site repair or replacement.
 `,
   },
   {
-    image: "/s2.webp",
+    image: "/s2.jpg",
     img1: "/sk2.jpg",
     title: "Pet Mesh Screen Repair & Replacement – Wa Flyscreen",
     page: "/Service2",
