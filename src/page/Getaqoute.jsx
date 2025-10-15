@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../api"; // ✅ Make sure this is defined properly
 
 function Getaqoute() {
   const [form, setForm] = useState({
@@ -18,13 +19,16 @@ function Getaqoute() {
       const file = files[0];
       setForm((prev) => ({ ...prev, image: file }));
       setImagePreview(file ? URL.createObjectURL(file) : null);
+      console.log("🖼️ Image selected:", file ? file.name : "None");
     } else {
       setForm((prev) => ({ ...prev, [name]: value }));
+      console.log(`✏️ Field changed: ${name} = ${value}`);
     }
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log("🚀 Form submission started");
     setStatus("submitting");
 
     try {
@@ -36,17 +40,37 @@ function Getaqoute() {
       formData.append("message", form.message);
       if (form.image) formData.append("image", form.image);
 
-      const res = await fetch(`${API_BASE_URL}getaquote.php`, {
+      // ✅ Debugging logs
+      console.log("📦 FormData contents:");
+      for (let [key, value] of formData.entries()) {
+        console.log(`   ${key}:`, value);
+      }
+
+      const apiUrl = `${API_BASE_URL}getaquote.php`;
+      console.log("🌐 Fetching:", apiUrl);
+
+      const res = await fetch(apiUrl, {
         method: "POST",
         body: formData,
       });
 
-      if (!res.ok) throw new Error("Network error");
+      console.log("📡 Response status:", res.status);
+
+      if (!res.ok) {
+        const text = await res.text();
+        console.error("❌ Network response not OK:", text);
+        throw new Error("Network error");
+      }
+
+      const data = await res.text();
+      console.log("✅ API Response Text:", data);
 
       setStatus("success");
       setForm({ name: "", email: "", phone: "", suburb: "", message: "", image: null });
       setImagePreview(null);
-    } catch {
+      console.log("🎉 Form successfully submitted and reset");
+    } catch (err) {
+      console.error("🔥 Error submitting form:", err);
       setStatus("error");
     }
   }
@@ -54,7 +78,7 @@ function Getaqoute() {
   return (
     <section
       id="getAQuoteForm"
-      className="py-16 px-6 bg-gray-50  font-Josefin scroll-mt-24"
+      className="py-16 px-6 bg-gray-50 font-Josefin scroll-mt-24"
     >
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-2 font-Marcellus">Get a Quote</h2>
@@ -152,6 +176,7 @@ function Getaqoute() {
                   onClick={() => {
                     setForm((prev) => ({ ...prev, image: null }));
                     setImagePreview(null);
+                    console.log("🗑️ Image removed");
                   }}
                   className="mt-2 text-sm text-red-500 hover:underline"
                 >
