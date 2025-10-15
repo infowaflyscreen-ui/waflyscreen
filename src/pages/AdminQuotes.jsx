@@ -41,7 +41,7 @@ const AdminQuotes = () => {
   const deleteQuote = async (id) => {
     if (!window.confirm("Delete this quote?")) return;
     try {
-      const response = await fetch(`${API_BASE_URL}deletequote.php`, {
+      const response = await fetch(`${API_BASE_URL}getaquote.php`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json", Accept: "application/json", Authorization: token ? `Bearer ${token}` : "" },
         body: JSON.stringify({ id }),
