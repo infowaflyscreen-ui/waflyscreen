@@ -6,6 +6,7 @@ import ArrowUp from "../page/ArrowUp";
 import Footer from "../page/Footer";
 import TopBar from "./TopBar";
 import Header from "./Header";
+import Getaqoute from "./Getaqoute";
 import HeroSlider from "./HeroSlider";
 import TestimonialSection from "./TestimonialSection";
 import Blog from "./Blog";
@@ -19,6 +20,7 @@ function Home(props) {
     <div>
       <HeroSlider />
       <Image_section />
+       <Getaqoute />
       <Whatweare />
       <Faq />
       <Aboutus />

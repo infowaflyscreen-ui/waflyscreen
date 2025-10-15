@@ -9,7 +9,8 @@ import {
   Menu,
   X,
   User,
-  Users
+  Users,
+  FileText, // ✅ Added icon for Quotes
 } from 'lucide-react';
 
 const AdminLayout = ({ children }) => {
@@ -28,6 +29,7 @@ const AdminLayout = ({ children }) => {
     { name: 'Contacts', href: '/admin/contacts', icon: Mail, current: location.pathname === '/admin/contacts' },
     { name: 'Enquiries', href: '/admin/enquiries', icon: MessageSquare, current: location.pathname === '/admin/enquiries' },
     { name: 'Subscribers', href: '/admin/subscribers', icon: Users, current: location.pathname === '/admin/subscribers' },
+    { name: 'Quotes', href: '/admin/quotes', icon: FileText, current: location.pathname === '/admin/quotes' }, // ✅ Added Quotes link
   ];
 
   return (
@@ -40,7 +42,11 @@ const AdminLayout = ({ children }) => {
       )}
 
       {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
+      <div
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform ${
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}
+      >
         <div className="flex flex-col h-full">
           {/* Logo/Header */}
           <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">

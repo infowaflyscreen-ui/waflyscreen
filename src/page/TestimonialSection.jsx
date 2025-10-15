@@ -261,43 +261,71 @@ import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
+  // Fibreglass Flyscreen Repair & Replacement
   {
-    name: "Valleri Hodikumo",
+    name: "Lisa Thompson",
+    service: "Fibreglass Flyscreen Repair & Replacement",
     date: "03/01/2025",
     rating: 5,
-    text: "Great experience with RBC flyscreen and highly recommend their services. They offer quick, efficient and professional service with very friendly staff."
+    text: "Fantastic experience with WA Flyscreen! The fibreglass screen repair was done quickly and looks perfect. Highly recommend their team!"
   },
   {
-    name: "Asheigh Bowyer",
-    date: "7/02/2025",
-    rating: 5,
-    text: "Bloody brilliant, fast, efficient and unlike everyone else weren't stupid about the price 😊 Highly recommend them for flyscreen installations."
+    name: "James Carter",
+    service: "Fibreglass Flyscreen Repair & Replacement",
+    date: "07/02/2025",
+    rating: 4,
+    text: "Professional service for fibreglass flyscreen replacement. The team was punctual and the results exceeded my expectations!"
   },
+
+  // Pet Mesh Screen Repair & Replacement
   {
-    name: "Preeti Soni",
+    name: "Priya Patel",
+    service: "Pet Mesh Screen Repair & Replacement",
     date: "10/03/2025",
     rating: 5,
-    text: "Found these guys in FB and thought of giving a try. They were absolutely fantastic. Very prompt with response and super reliable."
+    text: "Loved how WA Flyscreen handled our pet mesh screens. Strong, durable, and perfect for keeping our pets safe indoors."
   },
   {
-    name: "Michael Green",
+    name: "Mark Reynolds",
+    service: "Pet Mesh Screen Repair & Replacement",
     date: "16/04/2025",
-    rating: 5,
-    text: "Amazing service! The installation was quick and the team was super professional. Highly recommended for anyone looking for quality flyscreens."
+    rating: 4,
+    text: "The pet mesh screen replacement was flawless. Very impressed with their attention to detail and quick service."
   },
+
+  // Aluminium Mesh Screen Repair & Replacement
   {
-    name: "Sophia Lee",
+    name: "Emily Nguyen",
+    service: "Aluminium Mesh Screen Repair & Replacement",
     date: "18/05/2025",
     rating: 5,
-    text: "Really happy with the quality of the flyscreens. They look great and work perfectly. Excellent value for money, would use them again!"
+    text: "Excellent aluminium mesh screen repair! Strong, neat, and looks great. The team was professional and efficient."
   },
   {
-    name: "David Johnson",
+    name: "Daniel Wilson",
+    service: "Aluminium Mesh Screen Repair & Replacement",
     date: "19/06/2025",
+    rating: 4,
+    text: "WA Flyscreen replaced our aluminium mesh screens perfectly. Friendly staff, fast install, and very reliable service."
+  },
+
+  // One Way Mesh Screen Repair & Replacement
+  {
+    name: "Sophia Lee",
+    service: "One Way Mesh Screen Repair & Replacement",
+    date: "22/07/2025",
     rating: 5,
-    text: "Top-notch service from start to finish. Friendly staff and very efficient. Would definitely use them again in the future."
+    text: "The one way mesh screen installation was done perfectly. Works great and keeps the house secure while allowing airflow."
+  },
+  {
+    name: "Liam Johnson",
+    service: "One Way Mesh Screen Repair & Replacement",
+    date: "28/08/2025",
+    rating: 4,
+    text: "Fantastic job on our one way mesh screens! Excellent workmanship and very courteous staff. Highly recommend WA Flyscreen."
   }
 ];
+
 
 const TestimonialCarousel = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);

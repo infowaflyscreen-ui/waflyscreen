@@ -68,7 +68,7 @@ function Footer() {
         //   padding: "10px",
         //   minHeight: "100vh",
         // }}
-        className="w-full text-white bg-[#122632] bg-[url('/c5.jpg')] md:bg-[url('/footer.jpg')] bg-cover bg-no-repeat bg-left p-[10px] min-h-screen"
+        className="w-full text-white bg-[#122632] bg-[url('/footer.jpg')] md:bg-[url('/footer.jpg')] bg-cover bg-no-repeat bg-left p-[10px] min-h-screen"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-10">
           <div className="bg-[#00000069] rounded-2xl p-4 sm:p-6 lg:p-8">
@@ -103,8 +103,8 @@ function Footer() {
                   {status && (
                     <p
                       className={`mt-2 text-sm ${status.type === "success"
-                          ? "text-green-500"
-                          : "text-red-500"
+                        ? "text-green-500"
+                        : "text-red-500"
                         }`}
                     >
                       {status.message}
@@ -132,8 +132,8 @@ function Footer() {
                 </div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${isQuickLinksOpen
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
                     }`}
                 >
                   <ul className="space-y-2 p-2">
@@ -169,6 +169,22 @@ function Footer() {
                         Contact Us
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        to="/"
+                        className="block text-sm lg:text-base text-gray-200 hover:text-white hover:underline transition-colors duration-200 py-1"
+                        onClick={(e) => {
+                          e.preventDefault(); // prevent default navigation
+                          const el = document.getElementById("getAQuoteForm");
+                          if (el) {
+                            el.scrollIntoView({ behavior: "smooth", block: "start" });
+                          }
+                        }}
+                      >
+                        Get Quote
+                      </Link>
+
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -192,8 +208,8 @@ function Footer() {
                 </div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${isPoliciesOpen
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
                     }`}
                 >
                   <ul className="space-y-2 p-2">
@@ -236,8 +252,8 @@ function Footer() {
                 </div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${isConnectOpen
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0 lg:opacity-100 lg:max-h-none"
                     }`}
                 >
                   <ul className="space-y-2 p-2">

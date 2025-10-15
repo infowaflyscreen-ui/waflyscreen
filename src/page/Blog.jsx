@@ -1,36 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, MessageCircle, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 const NewsSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const navigate = useNavigate();
+
 
   const newsItems = [
     {
       id: 1,
-      title: "Why Fibreglass Flyscreens Are Essential",
+      title: "Fibreglass Flyscreen Repair & Replacement Tips",
       description:
-        "Keep insects out while enjoying airflow and light with durable fibreglass flyscreens. Contact Wa Flyscreen for professional installation in Perth and Peel!",
+        "Learn how to repair minor tears or replace worn-out fibreglass flyscreens. Wa Flyscreen provides professional on-site service across Perth and Peel!",
       author: "Wa Flyscreen",
       comments: 3,
       date: "01 Oct 2025",
-      image: "/b14.jpg",
+      image: "/b1.jpeg",
     },
     {
       id: 2,
-      title: "Top 5 Benefits of Fibreglass Flyscreens",
+      title: "Maintaining Your Fibreglass Screens After Replacement",
       description:
-        "Discover the durability, airflow, and cost-effective benefits of fibreglass flyscreens. Get a custom fit with Wa Flyscreen's mobile service!",
+        "Extend the life of your repaired or replaced fibreglass screens with simple cleaning and regular inspections. Wa Flyscreen offers mobile repairs at your convenience!",
       author: "Wa Flyscreen",
       comments: 2,
       date: "30 Sep 2025",
-      image: "/b12.jpg",
+      image: "/b2.jpeg",
     },
     {
       id: 3,
-      title: "Maintaining Your Fibreglass Flyscreens",
+      title: "Pet Mesh Screen Repair: Protect Your Pets and Home",
       description:
-        "Extend the life of your flyscreens with simple cleaning and regular inspections. Wa Flyscreen offers mobile repairs across Perth and Peel!",
+        "Keep pets safe and your home insect-free by repairing or replacing damaged pet mesh screens. Wa Flyscreen’s experts provide fast, reliable mobile service!",
       author: "Wa Flyscreen",
       comments: 4,
       date: "29 Sep 2025",
@@ -38,25 +42,68 @@ const NewsSlider = () => {
     },
     {
       id: 4,
-      title: "Heavy-Duty Pet Mesh Screens for Pet Owners",
+      title: "Aluminium Mesh Screen Replacement Guide",
       description:
-        "Protect your home and pets with scratch-resistant pet mesh screens. Contact Wa Flyscreen for durable, custom solutions!",
+        "Aluminium mesh screens provide strength and durability. Learn when to repair and when to replace them with Wa Flyscreen’s professional mobile services.",
       author: "Wa Flyscreen",
       comments: 5,
       date: "28 Sep 2025",
-      image: "/b11.jpg",
+      image: "/b4.jpeg",
     },
     {
       id: 5,
-      title: "Pet Mesh Screens for Safety and Comfort",
+      title: "Quick Repairs for Damaged Flyscreens",
       description:
-        "Keep pets safe and your home insect-free with heavy-duty pet mesh screens. Book Wa Flyscreen's mobile installation today!",
+        "Minor tears or bent frames? Wa Flyscreen can repair or replace your fibreglass, pet mesh, or aluminium mesh screens quickly and efficiently.",
       author: "Wa Flyscreen",
       comments: 3,
       date: "27 Sep 2025",
-      image: "/b12.jpg",
+      image: "/b5.jpeg",
     },
+
+    // New Blogs
+    {
+      id: 6,
+      title: "One Way Mesh Screens: Installation and Benefits",
+      description:
+        "Discover how one way mesh screens provide security while allowing airflow. Wa Flyscreen installs high-quality one way screens at your convenience.",
+      author: "Wa Flyscreen",
+      comments: 2,
+      date: "26 Sep 2025",
+      image: "/b6.jpg",
+    },
+    {
+      id: 7,
+      title: "Choosing the Right Screen for Your Home",
+      description:
+        "Fibreglass, pet mesh, aluminium, or one way mesh – learn which screen suits your needs. WA Flyscreen helps you select and install the perfect option.",
+      author: "Wa Flyscreen",
+      comments: 3,
+      date: "25 Sep 2025",
+      image: "/b7.webp",
+    },
+    {
+      id: 8,
+      title: "Tips to Maintain Pet Mesh Screens",
+      description:
+        "Keep your pet mesh screens durable and effective with simple care tips. WA Flyscreen shares maintenance advice to extend the lifespan of your screens.",
+      author: "Wa Flyscreen",
+      comments: 1,
+      date: "24 Sep 2025",
+      image: "/b8.webp",
+    },
+    {
+      id: 9,
+      title: "Aluminium Mesh Screen: When to Repair vs Replace",
+      description:
+        "Not sure if your aluminium mesh screen needs repair or replacement? WA Flyscreen explains how to identify issues and provides expert mobile service.",
+      author: "Wa Flyscreen",
+      comments: 4,
+      date: "23 Sep 2025",
+      image: "/b9.jpg",
+    }
   ];
+
 
   const getVisibleSlides = () => {
     if (typeof window === 'undefined') return 1;
@@ -164,15 +211,19 @@ const NewsSlider = () => {
                       <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 line-clamp-2 leading-tight text-[#122632] group-hover:text-[#1a3a4a] transition-colors">
                         {item.title}
                       </h3>
-                      
+
                       <p className="text-xs sm:text-sm md:text-base text-[#122632]/80 mb-4 sm:mb-5 leading-relaxed line-clamp-3">
                         {item.description}
                       </p>
 
-                      <button className="inline-flex items-center gap-2 font-semibold text-[#122632] hover:text-[#1a3a4a] group/btn transition-all duration-300 text-sm sm:text-base">
+                      <button
+                        onClick={() => navigate(`/blog/${item.id}`)}
+                        className="inline-flex items-center gap-2 font-semibold text-[#122632] hover:text-[#1a3a4a] group/btn transition-all duration-300 text-sm sm:text-base"
+                      >
                         <span>READ MORE</span>
                         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform" />
                       </button>
+
                     </div>
                   </div>
                 </div>
@@ -221,11 +272,10 @@ const NewsSlider = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to slide ${index + 1}`}
-                className={`h-2.5 sm:h-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index
+                className={`h-2.5 sm:h-3 rounded-full transition-all duration-300 ${currentSlide === index
                     ? "bg-[#122632] w-8 sm:w-10"
                     : "bg-gray-300 w-2.5 sm:w-3 hover:bg-[#122632]/70 hover:w-5 sm:hover:w-6 active:scale-90"
-                }`}
+                  }`}
               />
             ))}
           </div>

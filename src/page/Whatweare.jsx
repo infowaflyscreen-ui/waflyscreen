@@ -5,25 +5,24 @@ const Whatweare = () => {
   return (
     <section className="bg-gray-200 py-10 md:px-16 px-4">
       <div className="max-w-[1260px] mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-        {/* Left: Video Embed */}
-        <div className="rounded-xl overflow-hidden shadow-lg">
-          <div className="relative w-full pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/tkrV2Ptovnc?si=XmvXKRKTzOYJeJey"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
+        {/* Left: Local Video */}
+        <div className="rounded-xl overflow-hidden  flex justify-center">
+          <video
+            className="w-[80%] md:w-[70%] h-auto rounded-xl"
+            controls
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/1_vid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* Right: Content */}
         <div className="text-[#122632]">
           <h2 className="text-4xl font-semibold mb-8 uppercase font-Marcellus">
-            Who We Are
+            Who Are We ?
           </h2>
           <p className="mb-3 leading-relaxed font-Josefin">
             At Wa Flyscreen, we believe comfort and peace of mind start at home.

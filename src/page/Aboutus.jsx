@@ -25,13 +25,7 @@ const AboutSection = () => {
           />
 
           {/* Experience Badge */}
-          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-8 lg:left-8 z-20 bg-[#122632] text-white text-sm sm:text-base lg:text-xl font-bold px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-lg shadow-lg transform font-Ubuntu">
-            20+
-            <br />
-            YEARS
-            <br />
-            SERVICE
-          </div>
+        
         </div>
       </div>
 
