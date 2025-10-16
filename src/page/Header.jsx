@@ -22,7 +22,8 @@ export default function Header() {
 
   // Check if current page is default bg page OR any blog page
   const isDefaultBgPage =
-    defaultBgPages.includes(location.pathname) || location.pathname.startsWith("/blog/");
+    defaultBgPages.includes(location.pathname) ||
+    location.pathname.startsWith("/blog/");
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -60,16 +61,16 @@ export default function Header() {
     <>
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 w-full z-30 transition-all duration-300 ${getHeaderBgClass()}`}
+        className={fixed top-0 left-0 w-full z-30 transition-all duration-300 ${getHeaderBgClass()}}
       >
-        <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="group">
               <img
                 src="/logo.svg"
                 alt="way fly screen"
-                className={`h-20 sm:h-12 md:h-16 lg:h-20 transition-all duration-300 group-hover:scale-110 ${
+                className={`h-14 sm:h-12 md:h-16 lg:h-20 transition-all duration-300 group-hover:scale-110 ${
                   isDefaultBgPage || isScrolled
                     ? "brightness-0 invert"
                     : "brightness-0 invert"
@@ -79,12 +80,12 @@ export default function Header() {
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center gap-4">
-            {/* Get a Quote Button */}
+          <div className="flex items-center gap-2 sm:gap-4">
+            {/* Get a Quote Button (Desktop & Tablet) */}
             {location.pathname === "/" ? (
               <button
                 onClick={handleScrollToQuote}
-                className={`px-6 py-3 text-base md:text-lg font-medium tracking-wider rounded-md transition-all duration-300 ${
+                className={`hidden sm:block px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-lg font-medium tracking-wider rounded-md transition-all duration-300 ${
                   isDefaultBgPage || isScrolled
                     ? "text-white border border-white/20 hover:border-white"
                     : "text-white border border-white/20 hover:border-white"
@@ -95,7 +96,7 @@ export default function Header() {
             ) : (
               <Link
                 to="/get-a-quote"
-                className={`px-6 py-3 text-base md:text-lg font-medium tracking-wider rounded-md transition-all duration-300 ${
+                className={`hidden sm:block px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-lg font-medium tracking-wider rounded-md transition-all duration-300 ${
                   isDefaultBgPage || isScrolled
                     ? "text-white border border-white/20 hover:border-white"
                     : "text-white border border-white/20 hover:border-white"
@@ -105,9 +106,26 @@ export default function Header() {
               </Link>
             )}
 
+            {/* Mobile Smaller Quote Button */}
+            {location.pathname === "/" ? (
+              <button
+                onClick={handleScrollToQuote}
+                className="sm:hidden px-3 py-2 text-xs font-semibold border border-white/30 rounded-md text-white hover:border-white transition-all duration-300"
+              >
+                Quote
+              </button>
+            ) : (
+              <Link
+                to="/get-a-quote"
+                className="sm:hidden px-3 py-2 text-xs font-semibold border border-white/30 rounded-md text-white hover:border-white transition-all duration-300"
+              >
+                Quote
+              </Link>
+            )}
+
             {/* MENU Button */}
             <button
-              className={`px-6 py-3 text-base md:text-lg font-medium tracking-wider rounded-md transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-medium tracking-wider rounded-md transition-all duration-300 ${
                 isDefaultBgPage || isScrolled ? "text-white" : "text-white"
               }`}
               onClick={handleOpenMenu}
