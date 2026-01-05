@@ -60,9 +60,7 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header
-        className={fixed top-0 left-0 w-full z-30 transition-all duration-300 ${getHeaderBgClass()}}
-      >
+      <header className={`fixed top-0 left-0 w-full z-30 transition-all duration-300 ${getHeaderBgClass()}`}>
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           {/* Logo */}
           <div className="flex items-center">
