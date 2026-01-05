@@ -101,7 +101,7 @@ export default function ChatEnquiryButton() {
 
             <div className="flex flex-col items-center justify-center text-center">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Logo"
                 className="h-25 sm:h-10 md:h-12 lg:h-25"
               />
