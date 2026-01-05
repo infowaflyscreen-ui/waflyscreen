@@ -66,7 +66,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link to="/" className="group">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="way fly screen"
                 className={`h-14 sm:h-12 md:h-16 lg:h-20 transition-all duration-300 group-hover:scale-110 ${
                   isDefaultBgPage || isScrolled
