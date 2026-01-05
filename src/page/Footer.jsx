@@ -74,11 +74,11 @@ function Footer() {
           <div className="bg-[#00000069] rounded-2xl p-4 sm:p-6 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
               {/* Column 1 - Logo + Subscribe */}
-              <div className="lg:col-span-2 bg-white">
+              <div className="lg:col-span-2">
                 <img
                   src="/logo.png"
                   alt="Logo"
-                  className="h-24 sm:h-28 md:h-32 w-auto ml-0 rounded-lg"
+                  className="h-24 sm:h-28 md:h-32 w-auto ml-0 rounded-lg bg-white"
                 />
 
 
