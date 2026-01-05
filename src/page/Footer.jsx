@@ -74,7 +74,7 @@ function Footer() {
           <div className="bg-[#00000069] rounded-2xl p-4 sm:p-6 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
               {/* Column 1 - Logo + Subscribe */}
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-2 bg-white">
                 <img
                   src="/logo.png"
                   alt="Logo"
