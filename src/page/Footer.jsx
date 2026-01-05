@@ -76,7 +76,7 @@ function Footer() {
               {/* Column 1 - Logo + Subscribe */}
               <div className="lg:col-span-2">
                 <img
-                  src="/logo1.png"
+                  src="/logo.png"
                   alt="Logo"
                   className="h-24 sm:h-28 md:h-32 w-auto ml-0 rounded-lg"
                 />
@@ -295,7 +295,7 @@ function Footer() {
       <div className="bg-[#122632] text-white py-4 px-4 font-Josefin">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-xs sm:text-sm text-gray-300">
-            © Copyright 2025 Waflyscreen | Powered by Megascale
+            © Copyright 2026 waflyscreenandsecurity.com.au
           </p>
         </div>
       </div>
