@@ -78,7 +78,7 @@ function Footer() {
                 <img
                   src="/logo.png"
                   alt="Logo"
-                  className="h-24 sm:h-28 md:h-32 w-auto ml-0 rounded-lg bg-white"
+                  className="h-24 sm:h-28 md:h-32 w-auto ml-0 rounded-lg bg-white p-4"
                 />
 
 
